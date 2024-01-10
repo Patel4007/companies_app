@@ -1,0 +1,1017 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+  }
+  
+  :root{
+    --bg-color: #fff;
+    --text-color: #221314;
+    --second-color: #5a7184; 
+    --main-color: #1067cc;
+    --big-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+  
+  }
+  
+  body {
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 18%;
+    transition: ease .40s;
+  }
+
+  .logo {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--bg-color);
+    float: left;
+    margin-left: 40px;
+  }
+  
+  .navbar {
+    display: flex;
+  }
+  
+  .navbar a{
+    color: var(--bg-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 4px;
+    transition: ease .40s;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 4px;
+  }
+  
+  #menu-icon {
+    color: var(--bg-color);
+    font-size: 300%;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+  }
+
+  header.sticky{
+    background: var(--bg-color);
+    padding: 10px 18%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  }
+  
+  .sticky .logo{
+    color: var(--text-color);
+  }
+  
+  .sticky .navbar a{
+    color: var(--text-color);
+  }
+  
+  .sticky .navbar a:hover{
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  .inner-banner{
+    position: relative;
+    padding: 140px 0px 140px;
+  }
+  
+  .inner-banner .image-layer{
+    background-image: url(../images/logo.jpg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment:fixed;
+  }
+  
+  .inner-banner .image-layer:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+  }
+  
+  .inner-banner .content-box{
+    position: relative;
+    text-align: center;
+  }
+  
+  .inner-banner .content-box h1{
+    position: relative;
+    color: #ffffff;
+    font-size: 70px;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-bottom: 15px;
+    opacity: 1;
+  }
+
+  .auto-container{
+    position: static;
+    max-width: 1360px;
+    padding: 0px 20px;
+    margin: 0 auto;
+    display: flex;
+  }
+  
+  .packages-section .row{
+    margin: 0 -12px;
+  }
+  
+  .packages-section .row .package-block{
+    padding: 0 12px;
+    margin-bottom: 24px;
+  }
+  
+  .slick-slider .package-block{
+    margin: 10px 12px;
+  }
+  
+  .package-block .inner-box{
+    position: relative;
+    display: block;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.22);
+    min-height: 100%;
+    
+  }
+  
+  .package-block .image-box{
+    position: relative;
+    width: 460px;
+    height: 250px;
+  }
+  
+  .package-block .image-box .image{
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .package-block .image-box .image img{
+    position: relative;
+    width: 100%;
+   
+    transition: all 0.5s ease;
+  }
+  
+  .package-block .inner-box:hover .image img{
+      
+      transform: scale(1.05);
+  }
+  
+  .package-block .image-box .b-title{
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    z-index: 5;
+  }
+  
+  .package-block .image-box .b-title span{
+    position: relative;
+    display: inline-block;
+    line-height: 22px;
+    padding: 2px 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Gilroy_Bold', sans-serif;
+    color: #2d3434;
+    background: #ffc322;
+    border-radius: 3px;
+  }
+  
+  .package-block .image-box .b-title.featured span{
+      background: #ffc322;
+  }
+  
+  .package-block .image-box .b-title.top-rated span{
+      background: var(--main-color);
+      color: #ffffff;
+  }
+  
+  .package-block .inner-box:hover .p-icon{
+      -webkit-animation: icon-bounce 0.8s ease-out infinite;
+      animation: icon-bounce 0.8s ease-out infinite;
+  }
+  
+  .package-block .image-box .fav-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 5;
+  }
+  
+  .package-block .image-box .fav-btn a{
+    position: relative;
+    display: block;
+    line-height: 24px;
+    color: #ffffff;
+    font-size: 21px;
+    opacity: 0.50;
+  }
+  
+  .package-block:hover .image-box .fav-btn a{
+    opacity: 1;
+  }
+  
+  .package-block .image-box .fav-btn a:hover{
+    color: #ff5522;
+  }
+  
+  .package-block .lower-box{
+    position: relative;
+    display: block;
+    padding: 30px 30px 0;
+  }
+  
+  .package-block.alt .lower-box{
+    padding-top: 25px;
+  }
+  
+  .package-block .lower-box .p-icon{
+    position: absolute;
+    top: -36px;
+    right: 30px;
+    width: 72px;
+    height: 72px;
+    z-index: 5;
+  }
+  
+  .package-block .lower-box .p-icon img{
+    max-height: 72px;
+  }
+  
+  .package-block .lower-box .location{
+    position: relative;
+    font-weight: 400;
+    color: black;
+    text-decoration: solid;
+    font-weight: 800;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    margin-bottom: 10px;
+  }
+  
+  .package-block.alt .lower-box .location{
+    margin-bottom: 5px;
+  }
+  
+  .package-block .lower-box h5{
+    position: relative;
+    font-weight: 400;
+    color: #2d3434;
+    margin-bottom: 20px;
+  }
+  
+  .package-block h5 a{
+    color: #2d3434;
+  }
+  
+  .package-block h5 a:hover{
+    color: var(--main-color);
+  }
+  
+  .package-block .lower-box .info{
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .is-hidden {
+    display: none;
+  }
+  
+  
+  .package-block .bottom-box{
+    position: relative;
+    margin-top: 25px;
+    padding: 15px 0;
+  }
+  
+  .package-block .bottom-box .rating{
+    position: relative;
+    float: left;
+  }
+  
+  .package-block .bottom-box .rating a{
+    font-size: 12px;
+    color: #a8b1b5;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 20px;
+    text-decoration: none;
+  }
+  
+  .package-block .bottom-box .rating strong{
+    position: relative;
+    font-family: 'Gilroy_Bold', sans-serif;
+    font-size: 14px;
+    color: #2d3434;
+  }
+  
+  .package-block .bottom-box .price{
+    position: relative;
+    font-size: 14px;
+    color: #6c7171;
+    line-height: 20px;
+    float: right;
+  }
+  
+  .package-block .bottom-box .price .amount{
+    font-size: 18px;
+    color: var(--main-color);
+    font-family: 'Gilroy_Bold', sans-serif;
+  }
+
+  .main-footer{
+    position: relative;
+  }
+  
+  .main-footer.style-two{
+    color: var(--bg-color);
+    background: var(--main-color);
+  }
+  
+  .main-footer ul, .main-footer ul li{
+    list-style: none;
+    margin: 0;
+  }
+  
+  .main-footer .upper-section{
+    position: relative;
+    padding: 140px 0 40px;
+  }
+  
+  .main-footer.style-two .upper-section{
+    padding-top: 90px;
+  }
+  
+  .main-footer h4{
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    font-weight: 400;
+    color: #2d3434;
+  }
+  
+  .main-footer.style-two h4{
+    color: #ffffff;
+  }
+  
+  .main-footer.style-two .info li a{
+    color: var(--bg-color);
+  }
+  
+  .main-footer .info li a:hover{
+    color: var(--main-color);
+    text-decoration: none;
+  }
+  
+  .main-footer .links{
+    position: relative;
+  }
+  
+  .main-footer .links li{
+    position: relative;
+    display: block;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: capitalize;
+    margin-bottom: 18px;
+  }
+  
+  .main-footer .links li:last-child{
+    margin-bottom: 0;
+  }
+  
+  .main-footer .links li a{
+    position: relative;
+    color: var(--bg-color);
+    line-height: 24px;
+  }
+  
+  .main-footer.style-two .links li a{
+    color: var(--bg-color);
+  }
+  
+  .main-footer .links li a:hover{
+    color: var(--bg-color);
+    text-decoration: none;
+  }
+
+  .banner-section{
+    position: relative;
+    padding: 0 0;
+    background: #ffffff;
+  }
+  
+  .banner-section .auto-container{
+    max-width: none;
+    padding: 0 0;
+  }
+  
+  .banner-section .banner-container{
+    position: relative;
+  }
+  
+  .banner-section .banner-arrow{
+    position: absolute;
+    left: 20px;
+    bottom: -160px;
+    z-index: 5;
+  }
+  
+  .banner-section .banner-slider{
+    position:relative;
+    width:100%;
+    overflow: hidden;
+  }
+  
+  .banner-section .row{
+    margin: 0 0;
+  }
+  
+  .banner-section .left-col{
+    position: relative;
+    padding: 0 0;
+  }
+  
+  .banner-section .left-col .inner{
+    position: relative;
+    display: block;
+    min-height: 100%;
+  }
+  
+  .banner-section .left-col .content{
+    position: relative;
+    display: block;
+    float: right;
+    width: 100%;
+    max-width: 680px;
+    padding: 240px 120px 200px 20px;
+  }
+  
+  .banner-section .left-col .bg-image{
+    position: absolute;
+    left: -100px;
+    bottom: -60px;
+  }
+  
+  .banner-section .left-col h3{
+    position: relative;
+    font-weight:400;
+    font-family: 'Reey_Regular', cursive;
+    color: var(--main-color);
+    line-height:1.20em;
+    margin:0px 0px 10px;
+  }
+  
+  .banner-section .left-col h1{
+    position: relative;
+    font-weight:400;
+    line-height:1.20em;
+    margin:0px 0px 35px;
+  }
+  
+  .banner-section .left-col h1 .d-icon{
+    position: absolute;
+    right: -20px;
+    top: -75px;
+  }
+  
+  .banner-section .left-col .text{
+    position: relative;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .banner-section .left-col .lower-text{
+    position: relative;
+    line-height: 1.8em;
+    display: block;
+    margin-top: 22px;
+  }
+  
+  .banner-section .left-col .lower-text span{
+    font-size: 18px;
+    color: var(--main-color);
+    font-weight: 700;
+  }
+  
+  .banner-section .left-col .form-box{
+    position: relative;
+    display: block;
+    background: #ffffff;
+    padding: 22px 170px 18px 24px;
+    margin-right: -280px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    z-index: 5;
+  }
+  
+  .banner-section form .row{
+    margin: 0 -6px;
+  }
+  
+  .banner-section form .row .form-group{
+    position: relative;
+    padding: 0 6px;
+    margin-bottom: 12px;
+  }
+  
+  .banner-section .site-form form input{
+      font-size: 14px;
+      padding-left: 15px !important;
+  }
+  
+  .banner-section .site-form form .form-group .alt-icon{
+      right: 15px;
+      font-size: 14px;
+  }
+  
+  .banner-section .site-form form button{
+    position: absolute;
+    right: -146px;
+    width: 134px;
+    top: 30px;
+  }
+  
+  .banner-section .right-col{
+    position: relative;
+    padding: 0 0;
+  }
+  
+  .banner-section .right-col .inner{
+    position: relative;
+    display: block;
+    min-height: 100%;
+  }
+  
+  .banner-section .right-col .image-layer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    border-radius: 0 0 0 7px;
+  }
+  
+  .banner-section .right-col .image-layer:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.0);
+    border-radius: 0 0 0 10px;
+  }
+  
+
+  .search-one{
+    position: relative;
+    z-index: 15;
+}
+
+.search-one .outer{
+  position: relative;
+}
+
+.search-one .search-title{
+    position: absolute;
+    left: 0;
+    top: -54px;
+    font-family: 'Gilroy_Bold', sans-serif;
+    color: #2d3434;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 12px 25px;
+    background: #f2f4f7;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.search-one .search-title span{
+  position: relative;
+  display: block;
+}
+
+.tabs-box{
+  position: relative;
+}
+
+.tabs-box .tab-buttons{
+  position: relative;
+}
+
+.tabs-box .tab-buttons .tab-btn{
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.tabs-box .tabs-content{
+  position: relative;
+}
+
+.tabs-box .tabs-content .tab{
+  position: relative;
+  display: none;
+}
+
+.tabs-box .tabs-content .active-tab{
+  display: block;
+}
+
+.search-one .search-tabs{
+    position: relative;
+}
+
+.search-one .search-tabs .tab-buttons{
+    position: absolute;
+    left: 0;
+    top: -54px;
+    font-family: 'Gilroy_Bold', sans-serif;
+    color: #2d3434;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.search-one .search-tabs .tab-buttons .tab-btn{
+  position: relative;
+  float: left;
+  line-height: 30px;
+  padding: 12px 22px;
+  background: #f2f4f7;
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.search-one .search-tabs .tab-buttons .active-btn{
+    background: #ffffff;
+}
+
+.search-one .search-tabs .tab-buttons .tab-btn:last-child{
+  border-radius: 0 10px 0 0;
+}
+
+.search-one .form-box{
+  position: relative;
+  display: block;
+  background: #ffffff;
+  padding: 25px 170px 15px 24px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  z-index: 5;
+}
+
+.search-one form .row{
+  margin: 0 -6px;
+}
+
+.search-one form .row .form-group{
+  position: relative;
+  padding: 0 6px;
+  margin-bottom: 12px;
+}
+
+.search-one .site-form form input{
+    font-size: 14px;
+    padding-left: 15px !important;
+}
+
+.search-one .site-form form .form-group .alt-icon{
+    right: 12px;
+    font-size: 14px;
+}
+
+.search-one .site-form form button{
+  position: absolute;
+  right: -146px;
+  width: 134px;
+  top: 30px;
+}
+
+.site-form form .form-group{
+    margin-bottom: 30px;
+  }
+  
+  .site-form form .form-group .field-inner{
+    position: relative;
+  }
+  
+  .site-form form .form-group .field-inner .alt-icon{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -15px;
+    height: 30px;
+    color: #a8b1b5;
+    font-size: 16px;
+    line-height: 30px;
+    pointer-events: none;
+  }
+  
+  .site-form form .form-group .field-label{
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Gilroy_Bold', sans-serif;
+    line-height: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .site-form form .form-group .f-label i{
+    color: var(--main-color);
+    font-style: normal;
+  }
+  
+  .site-form form .form-group input[type="text"],
+  .site-form form .form-group input[type="email"],
+  .site-form form .form-group input[type="password"],
+  .site-form form .form-group input[type="url"],
+  .site-form form .form-group input[type="number"],
+  .site-form form .form-group input[type="file"],
+  .site-form form .form-group input[type="range"],
+  .site-form form .form-group select,
+  .site-form form .form-group textarea{
+      height: 54px;
+      line-height: 24px;
+      padding: 11px 20px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      color: #2d3434;
+      font-weight: 400;
+      background: #ffffff;
+      border-radius: 4px;
+  }
+  
+  .site-form form .form-group textarea{
+    height: 170px;
+  }
+  
+  .site-form form .form-group select option{
+    text-indent: 20px;
+  }
+  
+  .site-form form .form-group input[type="text"]:focus,
+  .site-form form .form-group input[type="email"]:focus,
+  .site-form form .form-group input[type="password"]:focus,
+  .site-form form .form-group input[type="url"]:focus,
+  .site-form form .form-group input[type="number"]:focus,
+  .site-form form .form-group input[type="file"]:focus,
+  .site-form form .form-group input[type="range"]:focus,
+  .site-form form .form-group select:focus,
+  .site-form form .form-group textarea:focus{
+    border-color: var(--main-color);
+  }
+  
+  .site-form form .f-btn{
+    position: relative;
+    display: block;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+    text-transform: capitalize;
+    background: var(--main-color);
+    padding: 12px 20px;
+    font-family: 'Gilroy_Bold', sans-serif;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 4px;
+    margin-right: 180px;
+    margin-top: 22px;
+  }
+  
+  .site-form form .f-btn i{
+    position: relative;
+    font-size: 14px;
+    padding-left: 5px;
+  }
+  
+  .site-form form .f-btn:hover{
+    background: #2d3434;
+    color: #ffffff;
+    box-shadow: 0 0 5px 0 var(--main-color);
+  }
+
+  .packages-three{
+    position: relative;
+    padding: 0 0 140px;
+    background: #ffffff;
+    z-index: 5;
+  }
+  
+  .packages-three .search-one{
+    position: relative;
+    margin-bottom: 130px;
+  }
+  
+  .packages-three .packages .row{
+    margin: 0 -12px;
+  }
+  
+  .packages-three .packages .package-block{
+    padding: 0 12px;
+    margin-bottom: 45px;
+  }
+
+
+  .new {
+    width: 100%;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin-top: 1rem;
+    margin-left: -20px;
+    color: grey;
+  }
+  
+  @media (max-width: 1400px) {
+
+    header{
+      padding: 17px 3%;
+      transition: .2s; 
+    }
+  
+    header.sticky {
+      padding: 10px 3%;
+      transition: .2s;
+    }
+    section {
+      padding: 80px 3%;
+      transition: .2s;
+    }
+    :root {
+      --big-font: 4.5rem;
+      --h2-font: 2.3rem;
+      --p-font: 1rem;
+      transition: .2s;
+    }
+  }
+  
+  @media (max-width: 1040px) {
+  
+     #menu-icon {
+      display: block;
+     }
+   
+     .sticky #menu-icon{
+      color: var(--text-color);
+     }
+  
+     .home-text {
+      height: 88vh;
+     }
+  
+     .navbar {
+      position: absolute;
+      top: 0;
+      right: -100%;
+      width: 270px;
+      height: 120vh;
+      background: #1067cc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 30px;
+      transition: 0.5s all;
+     }
+  
+     .navbar a {
+      display: block;
+      margin: 1.2rem 0;
+     }
+  
+     .sticky .navbar a{
+      color: var(--bg-color);
+     }
+  
+     .navbar a:hover {
+      color: var(--text-color);
+     }
+  
+     .open{
+      right: 0;
+     }
+  
+     .list{
+      width: 50%;
+      margin-bottom: 12px;
+     }
+  }
+  
+  @media (max-width: 575px) {
+    .list{
+      width: 100%;
+    }
+    :root {
+      --big-font: 3.8rem;
+      --h2-font: 1.8rem;
+      transition: .2s;
+    }
+    .text{
+      text-align: center;
+    }
+    .home-text {
+      height: 85vh;
+      transition: .2s;
+    }
+  }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.wrapper{
+  display: flex;
+  max-width: 1100px;
+  position: relative;
+}
+.wrapper i{
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #343F4F;
+  cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.9);
+}
+.wrapper i:hover{
+  background: #f2f2f2;
+}
+.wrapper i:first-child{
+  left: -22px;
+  display: none;
+}
+.wrapper i:last-child{
+  right: -22px;
+}
+.wrapper .carousel{
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.carousel.dragging{
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel.dragging img{
+  pointer-events: none;
+}
+.carousel img{
+  height: 170px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+.carousel img:first-child{
+  margin-left: 0px;
+}

@@ -1,0 +1,6 @@
+{
+    "Cleaning": ["cleaning", "housekeeping", "maid", "dusting", "vacuuming", "mopping", "sweeping"],
+    "Plumbing": ["plumbing", "pipes", "leak", "repair", "installation", "water", "sewer"],
+    "Gardening": ["gardening", "landscaping", "plants", "flowers", "lawn", "trimming", "pruning"]
+}
+  
